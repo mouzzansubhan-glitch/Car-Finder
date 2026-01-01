@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Minimal styling for clarity */
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    header { text-align: center; margin-bottom: 20px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; }
+    .filters label { display: flex; flex-direction: column; }
+    button { padding: 10px 20px; cursor: pointer; }
+    .car-card { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Car Finder</h1>
+    <p>Find the best car for your budget and priorities</p>
+  </header>
+
+  <section class="filters">
+    <label>Budget ($):
+      <input type="number" id="budget" placeholder="e.g. 40000">
+    </label>
+
+    <label>Priority:
+      <select id="priority">
+        <option value="fuel">Fuel Efficiency</option>
+        <option value="reliability">Reliability</option>
+        <option value="performance">Performance</option>
+      </select>
+    </label>
+
+    <label>Vehicle Type:
+      <select id="type">
+        <option value="All">All</option>
+        <option value="SUV">SUV</option>
+        <option value="Sedan">Sedan</option>
+        <option value="Truck">Truck</option>
+      </select>
+    </label>
+
+    <label>Fuel Type:
+      <select id="fuelType">
+        <option value="All">All</option>
+        <option value="Gas">Gas</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+      </select>
+    </label>
+
+    <button id="searchBtn">Find Cars</button>
+  </section>
+
+  <section id="results" class="results">
+    <!-- Car cards will appear here -->
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
